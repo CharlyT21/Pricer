@@ -3,7 +3,6 @@ namespace Price
 {
     public interface IOption
     {
-
-    double Price();
+        double Price();
     }
 }

@@ -8,5 +8,11 @@ namespace Price
             Call,
             Put
         }
+
+        public static enum Engine
+        {
+            BlackScholes,
+            MonteCarlo
+        }
     }
 }
