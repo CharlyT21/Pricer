@@ -1,16 +1,35 @@
 ﻿using System;
 namespace Price
 {
-    public class Pricer
+    public class Pricer : IPricer
     {
-        protected IOption option;
-
+        private IOption option;
+        private Enums.Engine engine;
         public Pricer(IOption _option)
         {
             option = _option;
         }
 
-        public double BlackScholes()
+        public double UseEngine(this Pricer pricer, Enums.Engine en)
+        {
+            engine = en;
+        }
+
+        public double Price()
+        {
+            switch(engine)
+            {
+                case Enums.Engine.BlackScholes:
+                    return BlackScholes();
+                case Enums.Engine.MonteCarlo:
+                    return 0.0;
+                default:
+                 return -1.0;
+            }
+        }
+
+
+        private double BlackScholes()
         {
             double price = 0;
             double S = option.Spot;
