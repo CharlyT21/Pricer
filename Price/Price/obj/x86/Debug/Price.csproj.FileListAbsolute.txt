@@ -1,0 +1,6 @@
+/Users/charlytran/Projects/Price/Price/obj/x86/Debug/Price.csprojAssemblyReference.cache
+/Users/charlytran/Projects/Price/Price/obj/x86/Debug/Price.csproj.CoreCompileInputs.cache
+/Users/charlytran/Projects/Price/Price/bin/Debug/Price.exe
+/Users/charlytran/Projects/Price/Price/bin/Debug/Price.pdb
+/Users/charlytran/Projects/Price/Price/obj/x86/Debug/Price.exe
+/Users/charlytran/Projects/Price/Price/obj/x86/Debug/Price.pdb
