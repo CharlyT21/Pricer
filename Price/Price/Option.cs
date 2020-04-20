@@ -1,30 +1,36 @@
 ﻿using System;
 namespace Price
 {
+   public enum Callput
+    {
+        Call,
+        Put
+    }
+
     public class Option
     {
-        protected double spot;
-        protected double strike;
-        protected double maturity;
-        protected double rate;
-        protected double volatility;
-        protected char callPut;
+        public double Spot { get; set; }
+        public double Strike { get; set; }
+        public double Maturity { get; set; } 
+        public double Rate { get; set; } 
+        public double Volatility { get; set; }
+        public Callput CallPut { get; set; }
 
-        public Option(double _spot, double _strike, double _maturity, double _rate, double _volatility, char _callPut)
+        public Option(double _spot, double _strike, double _maturity, double _rate, double _volatility, Callput _callPut)
         {
-            spot = _spot;
-            strike = _strike;
-            maturity = _maturity;
-            rate = _rate;
-            volatility = _volatility;
-            callPut = _callPut;
+            Spot = _spot;
+            Strike = _strike;
+            Maturity = _maturity;
+            Rate = _rate;
+            Volatility = _volatility;
+            CallPut = _callPut;
         }
 
-        public double Spot { get { return spot; } }
-        public double Strike { get { return strike; } }
-        public double Maturity { get { return maturity; } }
-        public double Rate { get { return rate; } }
-        public double Volatility { get { return volatility; } }
-        public char CallPut { get { return callPut; } }
+        public double Price()
+        {
+            return 0;
+        }
+
+
     }
 }

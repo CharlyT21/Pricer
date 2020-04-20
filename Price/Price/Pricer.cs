@@ -3,9 +3,9 @@ namespace Price
 {
     public class Pricer
     {
-        protected Option option;
+        protected IOption option;
 
-        public Pricer(Option _option)
+        public Pricer(IOption _option)
         {
             option = _option;
         }
@@ -24,22 +24,21 @@ namespace Price
 
             switch (option.CallPut)
             {
-                case 'c':
+                case Callput.Call:
                     price = S * CND(d1) - K * Math.Exp(-r * T) * CND(d2);
                     Console.WriteLine(" BnS Call price = " + price);
                     return price;
 
-                case 'p':
+                case Callput.Put:
                     price = (K * Math.Exp(-r * T) * CND(-d2)) - (S * CND(-d1));
                     Console.WriteLine(" BnS Put price = " + price);
                     return price;
             }
             Console.WriteLine("Error");
             return 0;
-
         }
 
-        public double CND(double X)
+        private double CND(double X)
         {
             double L = 0.0;
             double K = 0.0;
